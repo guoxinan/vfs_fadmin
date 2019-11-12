@@ -1,0 +1,102 @@
+---------------------------------------------------------------
+[ 2019-11-12T15:59:45+08:00 ] 127.0.0.1 POST fadmin.ccc/nMUqSefjXN.php/index/login?url=%2FnMUqSefjXN.php
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003003s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vfs_admin` [ RunTime:0.003026s ]
+[ sql ] [ SQL ] SELECT * FROM `vfs_admin` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000699s ]
+[ sql ] [ SQL ] UPDATE `vfs_admin`  SET `logintime`=1573545584,`token`='66df34dc-2ff1-4741-b84e-694801e15618',`updatetime`=1573545584  WHERE  `id` = 1 [ RunTime:0.025574s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vfs_admin_log` [ RunTime:0.003035s ]
+[ sql ] [ SQL ] INSERT INTO `vfs_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('登录' , '{\"url\":\"\\/nMUqSefjXN.php\",\"__token__\":\"bf5cd776447c61c0ff088c9a9e5eaaf1\",\"username\":\"admin\",\"captcha\":\"2bnu\"}' , '/nMUqSefjXN.php/index/login?url=%2FnMUqSefjXN.php' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.70 Safari/537.36' , '127.0.0.1' , 1573545584) [ RunTime:0.003354s ]
+---------------------------------------------------------------
+[ 2019-11-12T15:59:45+08:00 ] 127.0.0.1 GET fadmin.ccc/nMUqSefjXN.php
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003341s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vfs_auth_group_access` [ RunTime:0.002638s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `vfs_auth_group_access` `aga` LEFT JOIN `vfs_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001775s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vfs_auth_rule` [ RunTime:0.001673s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `vfs_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000751s ]
+[ sql ] [ SQL ] SELECT * FROM `vfs_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 1 ORDER BY `weigh` DESC [ RunTime:0.000869s ]
+[ sql ] [ SQL ] SELECT `name`,`pid` FROM `vfs_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 0  AND `name` LIKE '%/index' [ RunTime:0.001407s ]
+---------------------------------------------------------------
+[ 2019-11-12T15:59:45+08:00 ] 127.0.0.1 GET fadmin.ccc/nMUqSefjXN.php/dashboard?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003163s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vfs_auth_group_access` [ RunTime:0.002064s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `vfs_auth_group_access` `aga` LEFT JOIN `vfs_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000776s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vfs_auth_rule` [ RunTime:0.001658s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `vfs_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000678s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `vfs_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.000649s ]
+---------------------------------------------------------------
+[ 2019-11-12T15:59:59+08:00 ] 127.0.0.1 GET fadmin.ccc/nMUqSefjXN.php/addon?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002798s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vfs_auth_group_access` [ RunTime:0.002081s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `vfs_auth_group_access` `aga` LEFT JOIN `vfs_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000681s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vfs_auth_rule` [ RunTime:0.001526s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `vfs_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000654s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `vfs_auth_rule` WHERE  `name` = 'addon' LIMIT 1 [ RunTime:0.000634s ]
+---------------------------------------------------------------
+[ 2019-11-12T16:00:22+08:00 ] 127.0.0.1 POST fadmin.ccc/nMUqSefjXN.php/addon/install
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003425s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vfs_auth_group_access` [ RunTime:0.002176s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `vfs_auth_group_access` `aga` LEFT JOIN `vfs_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000730s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vfs_auth_rule` [ RunTime:0.001454s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `vfs_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000725s ]
+[ sql ] [ SQL ] INSERT INTO `vfs_auth_rule` (`name` , `title` , `icon` , `ismenu` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('command' , '在线命令管理' , 'fa fa-terminal' , 1 , 0 , 'normal' , 1573545622 , 1573545622) [ RunTime:0.080006s ]
+[ sql ] [ SQL ] INSERT INTO `vfs_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('command/index' , '查看' , 0 , 'fa fa-circle-o' , 85 , 'normal' , 1573545622 , 1573545622) [ RunTime:0.003570s ]
+[ sql ] [ SQL ] INSERT INTO `vfs_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('command/add' , '添加' , 0 , 'fa fa-circle-o' , 85 , 'normal' , 1573545622 , 1573545622) [ RunTime:0.001835s ]
+[ sql ] [ SQL ] INSERT INTO `vfs_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('command/detail' , '详情' , 0 , 'fa fa-circle-o' , 85 , 'normal' , 1573545622 , 1573545622) [ RunTime:0.001675s ]
+[ sql ] [ SQL ] INSERT INTO `vfs_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('command/execute' , '运行' , 0 , 'fa fa-circle-o' , 85 , 'normal' , 1573545622 , 1573545622) [ RunTime:0.001442s ]
+[ sql ] [ SQL ] INSERT INTO `vfs_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('command/del' , '删除' , 0 , 'fa fa-circle-o' , 85 , 'normal' , 1573545622 , 1573545622) [ RunTime:0.003016s ]
+[ sql ] [ SQL ] INSERT INTO `vfs_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('command/multi' , '批量更新' , 0 , 'fa fa-circle-o' , 85 , 'normal' , 1573545622 , 1573545622) [ RunTime:0.001480s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vfs_admin_log` [ RunTime:0.001908s ]
+[ sql ] [ SQL ] INSERT INTO `vfs_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('插件管理 安装' , '{\"name\":\"command\",\"force\":\"0\",\"uid\":\"14086\",\"token\":\"c7a5e29a-6e01-4a04-9a44-bf92f5dcea8e\",\"version\":\"1.0.5\",\"faversion\":\"1.0.0.20191101_beta\"}' , '/nMUqSefjXN.php/addon/install' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.70 Safari/537.36' , '127.0.0.1' , 1573545622) [ RunTime:0.002066s ]
+---------------------------------------------------------------
+[ 2019-11-12T16:00:22+08:00 ] 127.0.0.1 POST fadmin.ccc/nMUqSefjXN.php/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003476s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vfs_auth_group_access` [ RunTime:0.002465s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `vfs_auth_group_access` `aga` LEFT JOIN `vfs_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000991s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vfs_auth_rule` [ RunTime:0.001835s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `vfs_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000741s ]
+[ sql ] [ SQL ] SELECT * FROM `vfs_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 1 ORDER BY `weigh` DESC [ RunTime:0.000717s ]
+[ sql ] [ SQL ] SELECT `name`,`pid` FROM `vfs_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 0  AND `name` LIKE '%/index' [ RunTime:0.000895s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vfs_admin_log` [ RunTime:0.002283s ]
+[ sql ] [ SQL ] INSERT INTO `vfs_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"action\":\"refreshmenu\"}' , '/nMUqSefjXN.php/index/index' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.70 Safari/537.36' , '127.0.0.1' , 1573545622) [ RunTime:0.003423s ]
+---------------------------------------------------------------
+[ 2019-11-12T16:00:24+08:00 ] 127.0.0.1 GET fadmin.ccc/nMUqSefjXN.php/command?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003313s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vfs_auth_group_access` [ RunTime:0.001983s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `vfs_auth_group_access` `aga` LEFT JOIN `vfs_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000748s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vfs_auth_rule` [ RunTime:0.001448s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `vfs_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000710s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `vfs_auth_rule` WHERE  `name` = 'command' LIMIT 1 [ RunTime:0.000649s ]
+---------------------------------------------------------------
+[ 2019-11-12T16:00:25+08:00 ] 127.0.0.1 GET fadmin.ccc/nMUqSefjXN.php/command/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1573545624920
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003159s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vfs_auth_group_access` [ RunTime:0.001788s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `vfs_auth_group_access` `aga` LEFT JOIN `vfs_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000733s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vfs_auth_rule` [ RunTime:0.001483s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `vfs_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000747s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vfs_command` [ RunTime:0.004790s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vfs_command` ORDER BY `id` DESC LIMIT 1 [ RunTime:0.003809s ]
+[ sql ] [ SQL ] SELECT * FROM `vfs_command` ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000769s ]
+---------------------------------------------------------------
+[ 2019-11-12T16:00:26+08:00 ] 127.0.0.1 GET fadmin.ccc/nMUqSefjXN.php/command/add?dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002856s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vfs_auth_group_access` [ RunTime:0.001817s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `vfs_auth_group_access` `aga` LEFT JOIN `vfs_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000670s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vfs_auth_rule` [ RunTime:0.001443s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `vfs_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000839s ]
+[ sql ] [ SQL ] SHOW TABLES [ RunTime:0.008678s ]
+---------------------------------------------------------------
+[ 2019-11-12T16:00:27+08:00 ] 127.0.0.1 POST fadmin.ccc/nMUqSefjXN.php/command/get_field_list
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013615s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fastadmin' AND table_name = 'vfs_admin' ORDER BY ORDINAL_POSITION [ RunTime:0.003276s ]
+[ sql ] [ SQL ] 'vfs_admin'fastadmin'HOW COLUMNS FROM `vfs_admin_log` [ RunTime:0.002063s ]
+[ sql ] [ SQL ] INSERT INTO `vfs_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"table\":\"vfs_admin\"}' , '/nMUqSefjXN.php/command/get_field_list' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.70 Safari/537.36' , '127.0.0.1' , 1573545627) [ RunTime:0.011403s ]
+---------------------------------------------------------------
+[ 2019-11-12T16:07:22+08:00 ] 127.0.0.1 GET fadmin.ccc/nMUqSefjXN.php/command/index?search=&sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1573545624921
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003628s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vfs_auth_group_access` [ RunTime:0.002337s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `vfs_auth_group_access` `aga` LEFT JOIN `vfs_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000709s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vfs_auth_rule` [ RunTime:0.001488s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `vfs_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000746s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vfs_command` [ RunTime:0.001879s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vfs_command` ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000583s ]
+[ sql ] [ SQL ] SELECT * FROM `vfs_command` ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000484s ]
